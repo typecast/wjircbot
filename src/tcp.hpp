@@ -14,14 +14,12 @@ namespace wjirc
 		class Client
 		{
 			public:
-				Client();
-				~Client();
 				int cl_connect(const char* raddr, const char* rport);
 				int cl_close();
 				int cl_cycle(const char* raddr, const char* rport, int timeout);
 				int cl_send(const char* lmsg);
 				int cl_recv(char rmsg[]);
-			protected:
+			private:
 				int cl_sock;
 		};
 	};

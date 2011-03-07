@@ -39,7 +39,6 @@ int Config::Map::load_config(const char* file_path)
     std::string value = sbin.substr(++pos);
     
     set_value(key, value);
-    //std::cout << key.c_str() << "=" << get_value(key.c_str()) << "\n";
   }
   
   file_in.close();
