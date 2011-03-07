@@ -76,6 +76,8 @@ int Raw::Client::cl_cycle(const char* raddr, const char* rport,
 {
 	if(cl_close() != 0)
 		return -1;
+	if(timeout >= 0)
+		sleep(timeout);
 	int err = cl_connect(raddr, rport);
 	if(err != 0)
 		return err;
