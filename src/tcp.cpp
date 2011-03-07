@@ -22,16 +22,6 @@
 
 using namespace wjirc;
 
-// Default construction
-Raw::Client::Client() { }
-
-// Global deconstruction
-Raw::Client::~Client()
-{
-	if(cl_sock != (-1))
-		close(cl_sock);
-}
-
 int Raw::Client::cl_connect(const char* raddr, const char* rport)
 {
 	struct addrinfo hints, *res = NULL, *ptr = NULL;
