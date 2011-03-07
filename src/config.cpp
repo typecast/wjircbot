@@ -19,7 +19,7 @@ int Config::Map::load_config(const char* file_path)
   
   if(!file_in.is_open())
     return -1;
-
+  
   while(!file_in.eof())
   {
     char bin[512];
