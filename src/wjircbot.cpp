@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
       cout << CW << key[i] << ": " << CG << cfg.get_value(key[i])
             << " (OK!)" << CN << endl;
     }
-	}
+  }
   cout << "\n" << CG << "Configuration file OK! Moving on..." << CN
         << "\n\n";
 	
