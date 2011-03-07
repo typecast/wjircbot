@@ -94,17 +94,17 @@ int main(int argc, char *argv[])
           << CN << "\n";
   }
 	
-	cout << CG << "CLIENT -> Sleeping for a second before channel joins"
-			 << CN << "\n";
-	
-	sleep(1);
-	
-	if(icl.irc_autojoin(cfg.get_value(key[9]).c_str()) != 0)
-	{
-		cout << CG << "CLIENT -> " << CR << "Channel autojoin failed!" << CN
-				 << "\n";
-		return -4;
-	}
+  cout << CG << "CLIENT -> Sleeping for a second before channel joins"
+        << CN << "\n";
+  
+  sleep(1);
+  
+  if(icl.irc_autojoin(cfg.get_value(key[9]).c_str()) != 0)
+  {
+    cout << CG << "CLIENT -> " << CR << "Channel autojoin failed!" << CN
+          << "\n";
+    return -4;
+  }
   else
   {
     cout << CG << "CLIENT -> Sent channel autojoin commands." << CN
